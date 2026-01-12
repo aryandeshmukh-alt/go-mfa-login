@@ -389,7 +389,9 @@ This project demonstrates a complete authentication flow with:
       
     
 *   Clean and explainable code  
-      
-    
 
-It follows real-world backend security practices.
+* * *
+
+## Demo
+
+[Screencast from 2026-01-12 23-36-11.webm](https://github.com/user-attachments/assets/952076c1-1374-4940-ad74-ef334a7ad4c1)
