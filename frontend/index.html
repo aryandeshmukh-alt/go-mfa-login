@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Auth System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div id="topbar" class="topbar hidden">
+  <div class="user-info">
+    <div class="avatar">👤</div>
+    <span id="accountName"></span>
+  </div>
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<!-- Main Card -->
+<div class="app">
+
+  <h1>Secure Authentication</h1>
+  <p class="subtitle">Password + OTP Verification</p>
+
+  <div id="status" class="status info">Choose an option to continue</div>
+
+  <!-- Choice -->
+  <div id="choiceBox" class="card">
+    <button onclick="showRegister()">Create Account</button>
+    <button class="secondary" onclick="showLogin()">Login</button>
+  </div>
+
+  <!-- Register -->
+  <div id="registerBox" class="card hidden">
+    <h2>Register</h2>
+    <input id="ruser" placeholder="Username">
+    <input id="rpass" type="password" placeholder="Password">
+    <div id="passwordHint" class="password-hint">
+        Password must be at least 8 characters, include uppercase, lowercase & number
+    </div>
+    <button onclick="registerUser()">Register</button>
+  </div>
+
+  <!-- Login -->
+  <div id="loginBox" class="card hidden">
+    <h2>Login</h2>
+    <input id="luser" placeholder="Username">
+    <input id="lpass" type="password" placeholder="Password">
+    <button onclick="loginUser()">Login</button>
+  </div>
+
+  <!-- OTP -->
+  <div id="otpBox" class="card hidden">
+    <h2>OTP Verification</h2>
+
+    <div class="otp-box">
+      <span id="otpValue">----</span>
+    </div>
+
+    <input id="otp" placeholder="Enter OTP">
+    <button onclick="verifyOtp()">Verify OTP</button>
+  </div>
+
+  <!-- Success -->
+  <div id="successBox" class="card hidden success-card">
+    <h2>✅ Login Successful</h2>
+    <p>Welcome! You have been securely authenticated.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

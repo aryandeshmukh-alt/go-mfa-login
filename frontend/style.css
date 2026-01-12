@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  background: white;
+  width: 380px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  margin-top: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.card {
+  margin-top: 20px;
+  animation: fadeIn 0.4s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  background: #667eea;
+  color: white;
+}
+
+button.secondary {
+  background: #eee;
+  color: #333;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.status {
+  margin-top: 15px;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.status.info {
+  background: #eef;
+  color: #333;
+}
+
+.status.success {
+  background: #e6fffa;
+  color: #065f46;
+}
+
+.status.error {
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+.otp-box {
+  margin: 15px auto;
+  padding: 12px;
+  font-size: 22px;
+  letter-spacing: 4px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  width: 140px;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 12px 20px;
+  background: rgba(0,0,0,0.75);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.avatar {
+  background: #667eea;
+  border-radius: 50%;
+  padding: 5px 8px;
+}
+
+.logout-btn {
+  background: #ef4444;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.success-card {
+  background: linear-gradient(135deg, #d1fae5, #ecfeff);
+  border: 1px solid #34d399;
+}
+
+.card {
+  transition: all 0.4s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+.card:not(.hidden) {
+  opacity: 1;
+  transform: scale(1);
+}
+
+input {
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102,126,234,0.2);
+}
+
+button {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.password-hint {
+  font-size: 12px;
+  margin-top: 6px;
+  color: #666;
+}
+
+.password-hint.weak {
+  color: #dc2626;
+}
+
+.password-hint.strong {
+  color: #16a34a;
+}
